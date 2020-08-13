@@ -17,8 +17,8 @@ import java.util.List;
 import java.util.Map;
 
 public class PayPalClient {
-    private static final String clientID = "AcurRsjpU12jkXFOipopl2eWqIJhg5LXE_hUgabubfdYEBe8WZYWmdYuD8_YoJWE6-5bvVLuEija3FrD";
-    private static final String clientSecret = "EOgkg7zhx_RLFD0_D7-4bZrnugW3z4gSXJ0G1gxZ2nkeEuFDV2OqPq96LM9QxTUfrLqpvpHN-ewWuxvv";
+    private static final String clientID = "temp";
+    private static final String clientSecret = "temp";
 
     public static Map<String, Object> makePayment(String sum) {
         Map<String, Object> response = new HashMap<String, Object>();
