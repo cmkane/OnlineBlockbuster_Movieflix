@@ -1,0 +1,9 @@
+serviceConfig:
+  scheme: http://
+  hostName: 0.0.0.0
+  port: 1423
+  path: /
+
+loggerConfig:
+  outputDir: ./logs/
+  outputFile: webserver.log

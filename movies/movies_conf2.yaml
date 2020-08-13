@@ -1,0 +1,27 @@
+serviceConfig:
+  scheme: http://
+  hostName: 0.0.0.0
+  port: 8210
+  path: /api/movies
+
+loggerConfig:
+  outputDir: ./logs/
+  outputFile: movieService.log
+
+databaseConfig:
+  dbUsername: cs122b_db52
+  dbPassword: iG8MzIn_R_ao
+  dbHostname: colin-baker-v3.ics.uci.edu
+  dbPort: 3306
+  dbDriver: com.mysql.cj.jdbc.Driver
+  dbName: cs122b_db52
+  dbSettings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+
+idmConfig:
+  scheme: http://
+  hostName: 0.0.0.0
+  port: 2030
+  path: /api/idm
+
+idmEndpoints:
+  privilege: /privilege

@@ -1,0 +1,44 @@
+mysql -h -u -p
+SHOW CREATE TABLE CARTS
+ladeedadeeda :D
+describe <table_name>
+alter table carts add constraint uniqueConstraint UNIQUE (email,movieId);
+
+
+CREATE TABLE carts(
+    id int NOT NULL AUTO_INCREMENT,
+    email varchar(50) NOT NULL,
+    movieId varchar(10) NOT NULL,
+    quantity int NOT NULL,
+    PRIMARY KEY(id)
+)
+
+alter table carts add constraint uniqueConstraint UNIQUE (email,movieId);
+
+CREATE TABLE creditcards(
+    id varchar(20) NOT NULL,
+    firstName varchar(50) NOT NULL,
+    lastName varchar(50) NOT NULL,
+    expiration date NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE customers(
+    email varchar(50) NOT NULL,
+    firstName varchar(50) NOT NULL,
+    lastName varchar(50) NOT NULL,
+    ccId varchar(20) NOT NULL,
+    address varchar(200) NOT NULL,
+    PRIMARY KEY (email),
+    FOREIGN KEY (ccId) REFERENCES creditcards(id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE sales(
+    id int NOT NULL AUTO_INCREMENT,
+    email varchar(50) NOT NULL,
+    movieId varchar(10) NOT NULL,
+    quantity int NOT NULL,
+    saleDate date NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (email) REFERENCES customers(email) ON UPDATE CASCADE ON DELETE CASCADE
+);
